@@ -1,0 +1,481 @@
+:root {
+  --detailsColor: #e1ff00;
+  /* --detailsColor: #686868; */
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+#projectContainer {
+  width: 100dvw;
+  height: 20000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  /* font-family: "Beiruti", serif; */
+  font-family: "Inter Tight", sans-serif;
+  background-color: #0f0f0f;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#customLoadingScreenDiv {
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden I;
+  background-color: #ffffff;
+  opacity: 1;
+  gap: 20px;
+  z-index: 1000;
+}
+
+#video1 {
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* #loadingText {
+  color: #0f0f0f;
+  font-size: 30px;
+  font-weight:400;
+} */
+
+#loadingLineContainer {
+  background-color: #cfcfcf;
+  width: 15%;
+  border-radius: 10px;
+}
+
+#loadingLine {
+  width: 0;
+  height: 6px;
+  background-color: #292929;
+  border-radius: 10px;
+}
+
+/* #loadingPercentages {
+  color: #0f0f0f;
+  font-size:35px;
+  font-weight: 600;
+}
+
+#scrollTo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#scrollText {
+  color: #0f0f0f;
+  font-size: 22px;
+}
+
+#scrollIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#scrollIconArrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #0f0f0f;
+  border-bottom: 2px solid #0f0f0f;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  animation: arrowBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate(0, -10px) rotate(45deg);
+  }
+} */
+
+/* vignette zone //////////////////////////////////////////////*/
+/* #vignetteZone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,0) 30%, rgba(0,0,0,1) 100%);
+  z-index: 100;
+  display: none;
+} */
+/* scroll elements //////////////////////////////////////////////*/
+/* #weDesignGreatFabrics {
+  position: fixed;
+  top: 24dvh;
+  right: 16vw;
+  height: 9dvh;
+  width: 25vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 101;
+}
+
+#weDesignGreatFabrics img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 101;
+}
+
+#ellipseZone {
+  position: fixed;
+  top: 45dvh;
+  left: 33dvw;
+  height: 15dvh;
+  width: 34dvw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 101;
+}
+
+
+#ellipseZone img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 101;
+}
+
+#weAreCreatorsZone {
+  position: fixed;
+  top: 40dvh;
+  left: 3dvw;
+  color: var(--detailsColor);
+  font-size: 1.7vw;
+  font-weight: 400;
+  letter-spacing: 0.7vw;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 101;
+
+}
+
+#producersZone {
+  position: fixed;
+  bottom: 20dvh;
+  right: 0.5dvw;
+  color: var(--detailsColor);
+  font-size: 4vw;
+  font-weight: 400;
+  letter-spacing: 1.5vw;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.8;
+  z-index: 101;
+  pointer-events: none;
+}
+
+#texturalVarietyZone {
+  position: fixed;
+  top: 20dvh;
+  left: 2dvw;
+  color: var(--detailsColor);
+  font-size: 2.5vw;
+  font-weight: 400;
+  letter-spacing: 1.15vw;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.8;
+  z-index: 101;
+
+  pointer-events: none;
+}
+
+#boldPatternsZone {
+  position: fixed;
+  bottom: 10dvh;
+  right: 1dvw;
+  color: var(--detailsColor);
+  font-size: 3vw;
+  font-weight: 400;
+  letter-spacing: 1.25vw;
+  opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  opacity: 0.8;
+  z-index: 101;
+
+  pointer-events: none;
+}
+
+#colorExplorationZone {
+  position: fixed;
+  top: 10dvh;
+  right: 1dvw;
+  color: var(--detailsColor);
+  font-size: 3.5vw;
+  font-weight: 400;
+  letter-spacing: 1.2vw;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.8;
+
+
+  z-index: 101;
+  pointer-events: none;
+}
+
+#sustainableMaterialsZone {
+  position: fixed;
+  top: 5dvh;
+  left: 4dvw;
+  color: var(--detailsColor);
+  font-size: 3vw;
+  font-weight: 400;
+  letter-spacing: 1.5vw;
+  opacity: 0;
+  z-index: 101;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.8;
+
+
+  pointer-events: none;
+}
+
+#novelFabricDesignsZone {
+  position: fixed;
+  bottom: 30dvh;
+  left: 4dvw;
+  color: var(--detailsColor);
+  font-size: 3vw;
+  font-weight: 400;
+  letter-spacing: 1.25vw;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.8;
+  z-index: 101;
+
+  pointer-events: none;
+}
+
+#functionalFabricsZone {
+  position: fixed;
+  top: 5dvh;
+  right: 3dvw;
+  color: var(--detailsColor);
+
+  z-index: 101;
+  font-size: 3vw;
+  font-weight: 400;
+  letter-spacing: 1.2vw;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.8;
+  pointer-events: none;
+
+} */
+
+/* MENU CONTAINER //////////////////////////////////////////////*/
+#allMenucontainer {
+  position: fixed;
+  bottom: 50px;
+  left: 100px;
+  width: 280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+
+#menuContent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
+
+.menuContainer {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+
+.menuButtonsContainer {
+  width: 75px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding-top: 10px;
+  border-radius: 25px;
+}
+
+#outerColorButtonsContainer2 {
+  height: 68px;
+  overflow: hidden;
+  transition: height 0.2s ease-in-out;
+}
+
+#innerColorButtonsContainer2 {
+  height: 68px;
+  overflow: hidden;
+  transition: height 0.2s ease-in-out;
+}
+
+#textileButtonsContainer2 {
+  height: 68px;
+  overflow: hidden;
+  transition: height 0.2s ease-in-out;
+}
+
+.menuButtonContainer {
+  width: auto;
+  height: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.menuButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+cursor: pointer;
+box-sizing: border-box;
+}
+
+.shadow {
+  width: 50px;
+  height: 10px;
+  background: radial-gradient(
+    rgba(85, 85, 85, 0.43),
+    rgba(130, 130, 130, 0) 72%
+  );
+  border-radius: 50%;
+  filter: blur(3px);
+}
+
+.arrowButtonContainer {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrowButton {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-left: 1px solid #7c7c7c;
+  border-top: 1px solid #7c7c7c;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menuSingleTitle {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c7c7c;
+}
+
+#menuMainTitle {
+  width: 100%;
+  border-top: 1px solid #505050;
+  font-weight: 600;
+  font-size: 15px;
+  color: #505050;
+}
+
+/* canvas zone //////////////////////////////////////////////*/
+
+#canvasZone {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#renderCanvas {
+  width: 100dvw;
+  height: 100dvh;
+  touch-action: none;
+  /* touch-action: auto !important; */
+  outline: none !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (orientation: portrait) {
+  
+  #video1 {
+    width: 100%;
+    height: 65%;
+  }
+  
+  #loadingLineContainer {
+    width: 50%;
+  }
+
+  #allMenucontainer {
+    bottom: 20px;
+    left: 10px;
+  }
+}

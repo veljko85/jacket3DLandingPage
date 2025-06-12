@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jacket</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap" rel="stylesheet" /> -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <!-- Babylon.js - cds -->
+  <script src="https://cdn.jsdelivr.net/npm/babylonjs@6.0.0/babylon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babylonjs-materials@6.0.0/babylonjs.materials.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babylonjs-loaders@6.0.0/babylonjs.loaders.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/babylonjs-gui@6.0.0/babylon.gui.min.js"></script> -->
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="projectContainer">
+    <div id="customLoadingScreenDiv">
+      <video id="video1" muted autoplay style="align-self: center; justify-self: center">
+        <source src="Jacket_Drawing_v8_Loading_Bar.mp4" type="video/mp4" />
+
+        Your browser does not support HTML video.
+      </video>
+
+      <!-- <div id="loadingText">Loading one stitch at a time...</div> -->
+      <!-- <div id="loadingLineContainer">
+        <div id="loadingLine"></div>
+      </div> -->
+      <!-- <div id="loadingPercentages">0</div> -->
+      <!-- <div id="scrollTo">
+        <div id="scrollText">Scroll to continue</div>
+        <div id="scrollIcon"><span id="scrollIconArrow"></span></div>
+      </div> -->
+    </div>
+
+    <!-- <div id="vignetteZone"></div> -->
+
+    <div id="canvasZone">
+      <canvas id="renderCanvas"></canvas>
+    </div>
+
+    <!-- <div id="weDesignGreatFabrics">
+      <img src="weDesignGreatFabrics.svg" alt="" />
+    </div>
+
+    <div id="ellipseZone"><img src="Ellipse 1.svg" alt="" /></div>
+
+    <div id="weAreCreatorsZone">WE'RE CREATORS</div>
+
+    <div id="producersZone">PRODUCERS</div>
+
+    <div id="texturalVarietyZone">TEXTURAL VARIETY</div>
+
+    <div id="boldPatternsZone">BOLD PATTERNS</div>
+
+    <div id="colorExplorationZone">COLOR EXPLORATION</div>
+
+    <div id="sustainableMaterialsZone">SUSTAINABLE <br>MATERIALS</div>
+
+    <div id="novelFabricDesignsZone">NOVEL FABRIC <br>DESIGNS</div>
+
+    <div id="functionalFabricsZone">FUNCTIONAL FABRICS</div>
+
+    <div id="smartTextilesZone">SMART TEXTILES</div> -->
+
+    <!-- MENU CONTAINER -->
+    <div id="allMenucontainer">
+      <div id="menuContent">
+        <!-- OUTER COLOR CONTAINER -->
+        <div id="outerColorContainer" class="menuContainer">
+          <div id="outerColorButtonsContainer" class="menuButtonsContainer">
+
+            <div id="outerColorButtonsContainer2">
+              <div class="menuButtonContainer outerColorButtonContainer">
+                <div id="outerColorButton1" class="menuButton" style="background-image: url(./OuterYellow.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+              <div class="menuButtonContainer outerColorButtonContainer">
+                <div id="outerColorButton2" class="menuButton" style="background-image: url(./OuterWhite.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+
+
+              <div class="menuButtonContainer outerColorButtonContainer">
+                <div id="outerColorButton3" class="menuButton" style="background-image: url(./OuterGrey.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+
+              <div class="menuButtonContainer outerColorButtonContainer">
+                <div id="outerColorButton4" class="menuButton" style="background-image: url(./OuterBlack.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+            </div>
+
+            <div id="outerColorArrow" class="arrowButtonContainer"><span id="outerArrowButton" class="arrowButton"></span></div>
+
+          </div>
+
+          <div id="outerColorTitle" class="menuSingleTitle">
+            OUTER COLOR
+          </div>
+
+        </div>
+
+        <!-- INNER COLOR CONTAINER -->
+        <div id="innerColorContainer" class="menuContainer">
+          <div id="innerColorButtonsContainer" class="menuButtonsContainer">
+
+
+            <div id="innerColorButtonsContainer2">
+
+              <div class="menuButtonContainer innerColorButtonContainer">
+                <div id="innerColorButton1" class="menuButton" style="background-image: url(./innerYellow.jpg);"></div>
+
+
+                <div class="shadow"></div>
+              </div>
+
+
+              <div class="menuButtonContainer innerColorButtonContainer">
+                <div id="innerColorButton2" class="menuButton" style="background-image: url(./innerBeige.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+
+
+
+              <div class="menuButtonContainer innerColorButtonContainer">
+                <div id="innerColorButton3" class="menuButton" style="background-image: url(./innerGrey.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+
+
+              <div class="menuButtonContainer innerColorButtonContainer">
+                <div id="innerColorButton4" class="menuButton" style="background-image: url(./innerBlack.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+
+            </div>
+
+
+
+            <div id="innerColorArrow" class="arrowButtonContainer"><span id="innerArrowButton" class="arrowButton"></span></div>
+          </div>
+
+
+
+          <div id="innerColorTitle" class="menuSingleTitle">
+            INNER COLOR
+          </div>
+        </div>
+
+        <!-- TEXTILE CONTAINER -->
+        <div id="textileContainer" class="menuContainer">
+          <div id="textileButtonsContainer" class="menuButtonsContainer">
+
+            <div id="textileButtonsContainer2">
+
+              <div class="menuButtonContainer textileButtonContainer">
+                <div id="textileButton1" class="menuButton" style="background-image: url(./textile_1.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+
+              <div class="menuButtonContainer textileButtonContainer">
+                <div id="textileButton2" class="menuButton" style="background-image: url(./textile_2.jpg);"></div>
+                <div class="shadow"></div>
+              </div>
+
+
+            </div>
+
+            <div id="textileArrow" class="arrowButtonContainer"><span id="textileArrowButton" class="arrowButton"></span></div>
+
+
+
+          </div>
+
+          <div id="textileTitle" class="menuSingleTitle">TEXTILE</div>
+        </div>
+      </div>
+
+      <!-- MENU TITLE -->
+      <div id="menuMainTitle">CUSTOMIZE MATERIALS</div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="main.js"></script>
+
+</html>
